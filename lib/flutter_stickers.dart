@@ -6,8 +6,7 @@ class FlutterStickers {
   static const MethodChannel _channel =
       const MethodChannel('flutter_stickers');
 
-  static Future<String> get callMethod async {
-    final String version = await _channel.invokeMethod('callMethod');
-    return version;
+  static Future<String> callMethod(Map<String, dynamic> data) async {
+    await _channel.invokeMethod('callMethod', data);
   }
 }

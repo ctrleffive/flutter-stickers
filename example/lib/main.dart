@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
 
   Future<void> initPlatformState() async {
     try {
-      await FlutterStickers.callMethod;
+      await FlutterStickers.callMethod({"sasi": "1", "number": 32, "lists": [1,4,5]});
     } on PlatformException {
       return;
     }
